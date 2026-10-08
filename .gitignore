@@ -1,0 +1,17 @@
+# Maven
+target/
+*.class
+
+# Spring configuration / credentials
+src/main/resources/application.properties
+
+# Environment files
+.env
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log

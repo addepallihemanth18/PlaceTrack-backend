@@ -12,10 +12,10 @@ public class SeedDataConfig {
     @Bean
     CommandLineRunner seedAdmin(UserRepository users, PasswordEncoder encoder) {
         return arguments -> {
-            if (users.findByEmail("admin@placement.edu").isEmpty()) {
+            if (users.findByEmail("admin@admin.com").isEmpty()) {
                 User admin = new User();
-                admin.email = "admin@placement.edu";
-                admin.password = encoder.encode("Admin@123");
+                admin.email = "admin@admin.com";
+                admin.password = encoder.encode("admin123");
                 admin.role = Role.ROLE_ADMIN;
                 users.save(admin);
             }
